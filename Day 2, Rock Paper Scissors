@@ -1,0 +1,65 @@
+[int day=2; string name="Rock Paper Scissors";]
+-----------------------------------------
+[int part=1;]
+-----------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+int ans,a,b;
+string temp;
+int main() {
+    for(int i=1;i<=2500;i++){
+        cin>>temp;
+        if(temp=="A")a=1;
+        else if(temp=="B")a=2;
+        else a=3;
+        cin>>temp;
+        if(temp=="X")b=1;
+        else if(temp=="Y")b=2;
+        else b=3;
+        ans+=b;
+        if(a==b)ans+=3;
+        if(a==1&&b==2)ans+=6;
+        if(a==2&&b==3)ans+=6;
+        if(a==3&&b==1)ans+=6;
+    }
+    cout<<ans;
+    return 0;
+}
+-----------------------------------------
+[int part=2;]
+-----------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+int ans,a,b;
+string temp;
+int main() {
+    for(int i=1;i<=2500;i++){
+        cin>>temp;
+        if(temp=="A")a=1;
+        else if(temp=="B")a=2;
+        else a=3;
+        cin>>temp;
+        if(temp=="X")b=0;
+        else if(temp=="Y")b=3;
+        else b=6;
+        if(b==0){
+            if(a==1)ans+=3;
+            if(a==2)ans+=1;
+            if(a==3)ans+=2;
+        }
+        if(b==3){
+            ans+=b;
+            ans+=a;
+        }
+        if(b==6){
+            ans+=b;
+            if(a==1)ans+=2;
+            if(a==2)ans+=3;
+            if(a==3)ans+=1;
+        }
+    }
+    cout<<ans;
+    return 0;
+}
