@@ -1,0 +1,84 @@
+[int day=3; string name="Rucksack Reorganization";]
+-----------------------------------------
+[int part=1;]
+-----------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+int ans,sacklength,c;
+bool f;
+string sack,sackc1="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",sackc2="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+int main(){
+    for(int i=1;i<=300;i++){
+        f=false;
+        cin>>sack;
+        sacklength=sack.size();
+        c=sacklength/2;
+        for(int j=0;j<c;j++){
+            sackc1[j]=sack[j];
+            sackc2[j]=sack[j+c];
+        }
+        for(int j=0;j<c;j++){
+            for(int l=0;l<c;l++){
+                if(sackc1[j]==sackc2[l]){
+                    char common=sackc1[j];
+                    if(isupper(common)){
+                        ans+=int(common)-38;
+                    }else{
+                        ans+=int(common)-96;
+                    }
+                    f=true;
+                    break;
+                }
+            }
+            if(f){
+                break;
+            }
+        }
+    }    
+    cout<<ans;
+    return 0;
+}
+-----------------------------------------
+[int part=2;]
+-----------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+int ans;
+bool f;
+string sack1,sack2,sack3;
+int main(){
+    for(int i=1;i<=100;i++){
+        f=false;
+        cin>>sack1;
+        cin>>sack2;
+        cin>>sack3;
+        for(int j=0;j<sack1.size();j++){
+            for(int l=0;l<sack2.size();l++){
+                if(sack1[j]==sack2[l]){
+                    for(int k=0;k<sack3.size();k++){
+                        if(sack1[j]==sack3[k]){
+                            char common=sack1[j];
+                            if(isupper(common)){
+                                ans+=int(common)-38;
+                            }else{
+                                ans+=int(common)-96;
+                            }
+                            f=true;
+                            break;
+                        }
+                    }
+                    if(f){
+                        break;
+                    }
+                }
+            }
+            if(f){
+               break;
+            }
+        }
+    }    
+    cout<<ans;
+    return 0;
+}
