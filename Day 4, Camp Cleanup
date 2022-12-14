@@ -1,0 +1,51 @@
+[int day=4; string name="Camp Cleanup";]
+-----------------------------------------
+[int part=1;]
+-----------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+int ans,a1,a2,b1,b2;
+char c;
+int main() {
+    for(int i=1;i<=1000;i++){
+        scanf("%d-%d,%d-%d",&a1,&a2,&b1,&b2);
+        if(a1<=b1&&a2>=b2){
+            ans++;
+            continue;;
+        }
+        if(a1>=b1&&a2<=b2){
+            ans++;
+            continue;
+        }
+    }
+    cout<<ans;
+    return 0;
+}
+-----------------------------------------
+[int part=2;]
+-----------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+int ans,a1,a2,b1,b2;
+char c;
+int main() {
+    for(int i=1;i<=1000;i++){
+        scanf("%d-%d,%d-%d",&a1,&a2,&b1,&b2);
+        if(a1==b1||a2==b2){
+            ans++;
+            continue;
+        }
+        if(a1<=b1&&a2>=b1){
+            ans++;
+            continue;
+        }
+        if(a1>=b1&&b2>=a1){
+            ans++;
+            continue;
+        }
+    }
+    cout<<ans;
+    return 0;
+}
