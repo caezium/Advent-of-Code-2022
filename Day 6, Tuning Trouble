@@ -1,0 +1,58 @@
+[int day=6; string name="Tuning Trouble";]
+-----------------------------------------
+[int part=1;]
+-----------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+string buffer;
+char a,b,c,d;
+int main(){
+    cin>>buffer;
+    for(int i=0;i<buffer.length()-3;i++){
+        a=buffer[i];
+        b=buffer[i+1];
+        c=buffer[i+2];
+        d=buffer[i+3];
+        if(a!=b&&a!=c&&a!=d&&b!=c&&b!=d&&c!=d){
+            cout<<i+4<<endl;
+            return 0;
+        }
+    }
+    cout<<-1<<endl;
+    return 0;
+}
+
+-----------------------------------------
+[int part=2;]
+-----------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+string buffer;
+char a,b,c,d,e,f,g,h,i,j,k,l,m,n;
+int main(){
+    cin>>buffer;
+    for(int i=0;i<buffer.length()-13;i++){
+        a=buffer[i];
+        b=buffer[i+1];
+        c=buffer[i+2];
+        d=buffer[i+3];
+        e=buffer[i+4];
+        f=buffer[i+5];
+        g=buffer[i+6];
+        h=buffer[i+7];
+        i=buffer[i+8];
+        j=buffer[i+9];
+        k=buffer[i+10];
+        l=buffer[i+11];
+        m=buffer[i+12];
+        n=buffer[i+13];
+        if(a!=b&&a!=c&&a!=d&&a!=e&&a!=f&&a!=g&&a!=h&&a!=i&&a!=j&&a!=k&&a!=l&&a!=m&&a!=n&&b!=c&&b!=d&&b!=e&&b!=f&&b!=g&&b!=h&&b!=i&&b!=j&&b!=k&&b!=l&&b!=m&&b!=n&&c!=d&&c!=e&&c!=f&&c!=g&&c!=h&&c!=i&&c!=j&&c!=k&&c!=l&&c!=m&&c!=n&&d!=e&&d!=f&&d!=g&&d!=h&&d!=i&&d!=j&&d!=k&&d!=l&&d!=m&&d!=n&&e!=f&&e!=g&&e!=h&&e!=i&&e!=j&&e!=k&&e!=l&&e!=m&&e!=n&&f!=g&&f!=h&&f!=i&&f!=j&&f!=k&&f!=l&&f!=m&&f!=n&&g!=h&&g!=i&&g!=j&&g!=k&&g!=l&&g!=m&&g!=n&&h!=i&&h!=j&&h!=k&&h!=l&&h!=m&&h!=n&&i!=j&&i!=k&&i!=l&&i!=m&&i!=n&&j!=k&&j!=l&&j!=m&&j!=n&&k!=l&&k!=m&&k!=n&&l!=m&&l!=n&&m!=n){
+            cout<<i+14<<endl;
+            return 0;
+        }
+    }
+    cout<<-1<<endl;
+    return 0;
+}
