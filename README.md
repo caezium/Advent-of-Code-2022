@@ -1,6 +1,6 @@
 string name="Advent of Code";
 
-int year=2021;
+int year=2022;
 
 string website="https://adventofcode.com/2022";
 
